@@ -8,7 +8,7 @@ enable_onu_range() {
     for i in `seq $start_onu $end_onu`
     do
         echo "Enabling ONU $i"
-        # Code to enable ONU $i
+        snmp.Onu $i
     done
 }
 
@@ -23,7 +23,7 @@ enable_all_lcs_and_drops() {
         for drop in `seq 1 6`
         do
             echo "Enabling ONU $onu LC $lc Drop $drop"
-            # Code to enable ONU $onu LC $lc Drop $drop
+            snmp.Onu $i.LC $lc.Drop $drop
         done
     done
 }
@@ -60,6 +60,7 @@ while (1)
                     for drop in `seq 1 6`
                         do
                             echo "Enabling ONU $onu LC $lc Drop $drop"
+                            snmp.Onu $i.LC $lc.Drop $drop
                         done
                     done
                 done
@@ -71,6 +72,7 @@ while (1)
                     for drop in `seq 1 6`
                         do
                             echo "Disabling ONU $onu LC $lc Drop $drop"
+                            snmp.Onu $i.LC $lc.Drop $drop
                         done
                     done
                 done

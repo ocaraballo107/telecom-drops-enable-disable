@@ -17,13 +17,13 @@ This script is designed to simulate the option of enabling and disabling telecom
 4. Make the script executable:
 
    ```sh
-   chmod +x telecom_control.csh
+   chmod +x telecom-system-control.csh
    ```
 
 5. Run the script:
 
    ```sh
-   ./telecom_control.csh
+   ./telecom-system-control.csh
    ```
 
 6. Follow the on-screen instructions:

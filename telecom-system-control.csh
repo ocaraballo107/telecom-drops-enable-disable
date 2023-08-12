@@ -55,9 +55,26 @@ while (1)
             breaksw
         case 3:
             # Add code to disable ONU range
+            for lc in `seq start_onu end_onu`
+                do
+                    for drop in `seq 1 6`
+                        do
+                            echo "Enabling ONU $onu LC $lc Drop $drop"
+                        done
+                    done
+                done
+            done
             breaksw
         case 4:
-            # Add code to disable all LCs and drops for ONU
+            for lc in `seq start_onu end_onu`
+                do
+                    for drop in `seq 1 6`
+                        do
+                            echo "Disabling ONU $onu LC $lc Drop $drop"
+                        done
+                    done
+                done
+            done
             breaksw
         case 5:
             echo "Exiting"
